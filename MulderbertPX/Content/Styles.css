@@ -1,0 +1,1048 @@
+﻿/*Dev Note:Standard Styling, then Responsive Design Styling @media only at 768px then 400px below*/
+/*General Styling*/
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    color:#898C8C; /*Grey Font Color*/
+    width: 100%;
+    height: auto;
+}
+
+h1{
+	font-size: 2.3em;
+	font-style: normal;
+    font-weight: bold;
+	font-variant: normal;
+	line-height:normal;
+    margin-left: 1%;
+}
+
+h2 {
+	font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+	font-variant: normal;
+    margin-left: 1%;
+}
+
+h3 {	
+	font-size: 1.1em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 2em;
+}
+
+p {    
+    font-size: 1em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+
+li {    
+    font-size: 100%;
+    font-style: normal;
+    font-variant: normal;   
+}
+
+#right{
+    align-content: center;
+}
+
+/*About Us View Styling*/
+#about_us {
+    width: 100%;
+    margin: 3% auto;
+}
+
+#about_left{
+    width:30%;
+    float:left;
+    padding:5%;
+    margin:1%;
+    border: solid;
+    border-radius:4%;  
+}
+
+#about_middle {
+    width:20%;
+    float:left;    
+    padding:3%;
+    margin:1%;
+    border:solid black 1px;
+    border-radius:4%;
+}
+
+#about_right {
+    float: right;
+    width: 25%;
+    margin: 1% auto;
+    padding: 1%;
+    border: solid;
+    border-radius: 4%;
+    box-sizing: content-box;
+}
+    #about_right img {
+        border-radius: 4%;
+        width: 100%;
+    }
+
+/*ContactUs View Styling*/
+#contact_form {
+    width: auto;
+    float: left;
+    text-align: center;
+    padding: 1%;
+    margin: 1%;
+    border: solid;
+    border-radius: 4%;
+    list-style-type: none;
+    box-sizing: content-box;
+}
+
+.inputbox {
+    margin: 1% auto;
+    padding: 2%;
+}
+
+.textbox {
+    width: 100%;
+    margin: 1% auto;
+    padding: 1%;
+    position: relative;
+    resize: both; /*Programmatic resizing of contact us box when text area is actively extended and used*/
+    overflow: auto;
+}
+
+#contact_form fieldset {
+    border: none;
+}
+
+#faq {
+    float: right;
+    width: 24%;
+    padding: 1%;
+    margin: 1%;
+    border: solid black 1px;
+    border-radius: 4%;
+    box-sizing: content-box;
+}
+
+
+#offline_contact {
+    float: right;
+    width: 26%;
+    padding: 1%;
+    margin: 1% auto;
+    border: solid black 1px;
+    border-radius: 4%;
+    font-size: 120%;
+}
+
+/*Button Styling*/
+.submit_button {
+    margin: 3% auto;
+}
+    .submit_button:hover {
+        font-weight: bold;
+        font-size: 1.2em;
+        background-color: lightgreen;
+    }
+    .submit_button:active {
+        background-color:red;
+    }
+
+/*Input Validation / Error Message Display Styling*/
+.validation {
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    list-style-type: none;
+    font-size: 1em;
+}
+    .validation ul {
+        list-style-type: none;
+    }
+
+/*Contact Us Reponse Styling - SubmitEntry*/
+#contact_response {
+    width: 90%;
+    border-style: solid;
+    margin: 5% auto;
+}
+
+#successful_contact, #contact_response h2 {
+    text-align: center;
+    display: block;
+}
+
+/*Login View Styling*/
+#login {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+#login form input{
+    margin-top:2%;
+}
+
+#login form{
+    display: block;
+    width: 100%;
+}
+
+#login_success h2, #login_success h3 {
+    width: 100%;
+    text-align: center;
+    margin: 1% auto;
+}
+
+/*Registration View Styling*/
+#register_form fieldset{
+    margin:5%;
+}
+
+.register_details {
+    width: 30%;
+    float: left;
+    padding: 1%;
+    margin: 1%;
+    border: solid black 1px;
+    border-radius: 4%;
+    box-sizing: content-box;
+}
+    .register_details p span {
+        float: right;
+    }
+
+#terms_conditions {
+    float: left;
+    width: 25%;
+    padding: 1%;
+    margin: 1%;
+    border: solid black 1px;
+    border-radius: 4%;
+    box-sizing: content-box;
+}
+
+/*Registration Response*/
+#registration_success {
+    width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#registration_summary {
+    width: 80%;
+    margin: 5% auto;
+    padding: 2%;
+    box-sizing: content-box;
+    border-style: solid;
+    text-align: left;
+}
+    #registration_summary span {
+        float: right;
+    }
+    #registration_summary h4 {
+        text-align: center;
+    }
+
+/*Styling for Product Range View*/
+#product_range {
+    width: 100%;
+}
+    #product_range > h2 {
+        font-size: 1.6em;
+    }
+
+.product_display{
+    width:25%;
+    float:left;
+}
+    .product_display img {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        border-radius: 7%;
+    }
+    .product_display ul li {
+        list-style-type: none;
+        padding: 5%;
+    }
+
+ /*AcceptOrder Syling*/
+#order_acceptance {
+    border: ridge;
+    text-align:center;
+    padding: 3%;
+    margin: 5%;
+}
+
+.order_links h4 {
+    text-align: center;
+    margin: 1% auto;
+    font-size: 1.5em;
+    line-height:normal;
+}
+
+.order_links h5 { /*Applied to Links in Footer in Shared.cshtml*/
+    display: inline;
+    margin-left: 3%;
+}
+    .order_links h4:hover, 
+    .order_links h5:hover {
+        font-weight:lighter;
+        text-decoration:none;
+    }
+
+/*Styling of Product Services View*/
+#service_description {
+    float: left;
+    width: 40%;
+    margin: 1%;
+    padding: 2%;
+    border: solid black 1px;
+    border-radius: 5%;
+    box-sizing: content-box;
+}
+    #service_description h2 {
+        font-size: 1.6em;   
+    }
+
+.service_products {
+    float: right;
+    width: 45%;
+    margin: 1%;
+    border: solid black 1px;
+    border-radius: 5%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /*IE Edge+*/
+}
+
+#tech_support, #fridge_services {
+    padding: 5%;
+    width: 100%;
+    box-sizing:border-box;
+}
+    #tech_support img, #fridge_services img,
+    .service_description_images img, #service_description img {
+        align-content: center;
+        width: 100%;
+        height: auto;
+        border-radius: 5%;
+    }
+    #tech_support ul, #fridge_services ul {
+        text-align: left;
+        padding: 3%;
+    }
+        #tech_support ul li, #fridge_services ul li, #fridge_services ul li p {
+            list-style-type: none;
+            font-size: 1.3em;
+            line-height: normal;
+            text-align: center;
+            width: 100%;
+        }
+
+/*Home View Styling*/
+#home_gallery{
+	margin:5% auto;
+	position:relative;
+	width:25em;
+	height:25em;
+	padding:5%;
+    box-sizing:content-box;
+	box-shadow:0 0 20px rgba(0,0,0,0.4); 
+}
+    #home_gallery img {
+        width: 90%;
+        height: auto;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+        box-sizing: content-box;
+    }
+
+/*Styling for Shared Layout*/
+#small_mulderbert {
+    display: none;
+}
+    
+#wrapper {
+    width: 100%;
+}
+
+#header {
+    margin: 1%;
+    position: relative;
+    width: 100%;
+}
+    #header img {
+        width: 20%;
+    }
+
+#loginbox {
+    margin: -5% 1% 1% 4%;
+    resize: both; /*Resizes header div for spacing on smaller screens*/
+    float: right;
+    padding: 1%;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box; /*IE Edge+*/
+}
+    #loginbox h2 {
+        font-size: 2em;
+    }
+
+    #loginbox fieldset {
+        position: relative;
+        width: 9%;
+        text-align: center;
+        float: right;
+        font-size: 0.8em;
+        border-radius: 5%;
+        -webkit-border-radius: 5%; /*IE Edge+*/
+        display: inline-block;
+        box-shadow: inset;
+        margin: -7% 8% 1% 0;
+        min-width: 120px;
+        align-content: center;
+    }
+        #loginbox fieldset legend {
+            color: blueviolet;
+            width: 100%;
+        }
+
+        #loginbox fieldset p {
+            resize: both;
+            width: 100%;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin: 1% auto;
+            padding-bottom: 1%;
+        }
+        #loginbox fieldset p:hover {
+            font-weight: lighter;
+            text-decoration: none;
+        }
+
+/*Navigation Bar Styling*/
+#responsive_nav_wrapper, #btnOpen, #btnClose,
+#btnOpen img, #btnClose img {
+    display: none;
+}
+
+#nav_bar {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.5%;
+    color: #A9BDC4; /*Blue Nav Color*/
+    width: 95%;
+    margin-top: -3%;
+}
+    #nav_bar ul {
+        list-style-type: none;
+        width: 100%;
+        height: auto;
+        padding: 0.5%;
+        text-align: center;
+        border: groove;
+        background-color: #CEE5ED;
+        border-radius: 5%;
+    }
+        #nav_bar ul li {
+            display: inline;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10%;
+            padding: 0.5% 0.5% 0.5% 4%;
+            font-stretch: expanded;
+        }
+            #nav_bar ul li a {
+                text-decoration: none;
+                position: relative;
+                font-weight: normal;
+                font-size: 1.3em;
+            }
+                .#nav_bar ul li a:hover {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    color: cadetblue;
+                }
+                #nav_bar ul li a:visited {
+                    color: dodgerblue;
+                }
+
+/*Footer Styling*/
+#foot {
+    clear:both;
+    padding-top:1%;
+    width: 100%;
+    height:auto;
+    display: inline-block;
+}
+    #foot hr {
+        height: 0.5em;
+        background-color: lightgray;
+    }
+
+#footer_links {
+    text-align: left;
+    font-size: 1.4em;
+}
+    #footer_links a {
+        width:100%;
+    }
+
+#footer_address {
+    font-size: 1em;
+    text-align: center;
+    margin: -5% auto; /*Controls Footer Height*/
+}
+
+#footer_social_media {
+    float: right;
+    margin: -4% auto;
+    padding: 2%;
+    width: 20%;
+}
+
+/*SiteMap Styling*/
+.sitemap{
+    width: 90%;
+}
+    .sitemap > ul{
+        list-style-type:none;
+        text-align:center;
+    }
+    .sitemap > ul > li {
+        text-decoration: none;
+        font-size: 200%;
+        font-weight: bold;
+        list-style-type: none;
+        line-height: 2.5;
+        margin: 10px;
+    }
+    .sitemap > ul > li {
+        font-weight:lighter;
+    }
+
+#sitemapHeader{
+    text-align:center;
+}
+
+/*Responsive 768px - @media Styling to - make views responsive at 768px*/
+@media only screen and (max-width: 768px) {
+    /*Responsive 768px - Shared View Styling*/
+    body {
+        width: 100%;
+        text-align: center;
+        overflow: no-display;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        font-style: normal;
+        font-weight: bold;
+        font-variant: normal;
+        line-height: normal;
+        margin-left: 1%;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        font-style: normal;
+        font-weight: bold;
+        font-variant: normal;
+        margin-left: 1%;
+    }
+
+    h3 {
+        font-size: 1em;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: bold;
+        line-height: 2em;
+    }
+
+    p {
+        font-size: 0.8em;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+    }
+
+    li {
+        font-size: 90%;
+        font-style: normal;
+        font-variant: normal;
+    }
+
+    /*Header Styling*/
+    #small_mulderbert {
+        display: none;
+    }
+    
+    #wrapper, #header {
+        clear: both;
+        overflow: no-display;
+        text-align: center;
+        display: block
+    }
+        #header h2 img {
+            min-width: 300px;
+        }
+        #header h2 {
+            font-size: 225%;
+        }
+        #header fieldset {
+            clear: both;
+            margin: 1% auto;
+            padding: 0;
+            align-content: center;
+            box-sizing: border-box;
+        }
+
+    #loginbox {
+        width: 50%;
+        margin: 1% auto;
+        display: inline;
+        font-size: 125%;
+    }
+
+    /*Responsive 768px - Vertical Navigation Bar Styling*/
+    #nav_bar {
+        display: none;
+    }
+    #btnOpen {
+        display: inline;
+        float: left;
+        margin-left: 0.5%;
+    }
+        #btnOpen img {
+            display: inline;
+            width: 25%;
+            float: left;
+            border-radius: 4%;
+        }
+    #responsive_nav_wrapper {
+        margin-top: -15%;
+        display: block;
+        width: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: rgba(225, 233, 237, 0.1);
+        background-color: rgb(225, 233, 237); /*RGB version of #CEE5ED*/
+        overflow-x: hidden;
+        transition: 0.5s;
+        position: relative;
+        border-top-right-radius: 7%;
+        border-bottom-right-radius: 7%;
+        -webkit-border-top-right-radius: 7%; /*IE Edge+*/
+        -webkit-border-bottom-right-radius: 7%; /*IE Edge+*/
+        overflow: hidden;
+        -webkit-overflow-scrolling:auto
+    }
+    #responsive_nav {
+        top: 1%; 
+        margin-top: 4%; 
+    }
+        #responsive_nav ul {
+            list-style-type: none;
+            width: 100%;
+            color: #131b59;
+
+            transition: 0.3s;
+        }
+            #responsive_nav ul li {
+                display: block;
+                padding-bottom: 3%;
+                text-align: center;
+                text-decoration: none;
+                padding: 1%;
+                font-stretch: expanded;
+            }
+                #responsive_nav ul li a {
+                    text-decoration: none;
+                    position: relative;
+                    padding-bottom:1%;
+                    font-weight: normal;
+                    font-size: 1.2em;
+                    display: inline-block;
+                }
+                    #responsive_nav ul li a:hover {
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: cadetblue;
+                    }
+                    #responsive_nav ul li a:visited {
+                        color: dodgerblue;
+                    }
+    /* Position the close link on the slider */
+    .overlay {
+        position: fixed;
+        top: 10%;
+        right: 23%;
+        font-size: 2em;
+    }
+
+    #btnClose {
+        display: inline;
+        margin-top: 0.5%;
+        margin-right: 1%;
+    }
+        #btnClose img {
+            display: inline;
+            margin-right: 7%;
+            width: 10%;
+            float: right;
+            border-radius: 4%;
+        }
+    /*Responsive 768px - About us design*/
+    #about_us {
+        clear: both;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #about_left, #about_middle, #about_right, #contact_form, #faq,
+    #offline_contact, .service_products, #service_description,
+    #product_range, .product_display, #order_acceptance, #contact_response,
+    #register_form, #registration_success, .register_details, #terms_conditions {
+        clear: both;
+        width: 98%;
+        margin: 1% auto;
+        padding: 0.5%;
+        align-content: center;
+        text-align: center;
+        list-style-type: none;
+    }
+        .register_details p {
+            text-align:left;
+        }
+        #tech_support img, #fridge_services img,
+        .service_description_images img, #service_description img {
+            align-content: center;
+            width: 100%;
+            height: auto;
+            border-radius: 5%;
+            margin-bottom: 4%;
+        }
+    /*Responsive 768px - Home View Styling*/
+    #home_introduction {
+        text-align: left;
+        margin: 1% auto;
+        resize: both;
+        overflow:hidden;
+    }
+
+    #home_gallery {
+        margin: 2% auto;
+        position: relative;
+        width: 20em;
+        height: 20em;
+        padding: 3%;
+        box-sizing: content-box;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+        #home_gallery img {
+            width: 90%;
+            height: auto;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+            box-sizing: content-box;
+        }
+
+    /*`Responsive 768px - SiteMap Styling*/
+    .sitemap {
+        width: 90%;
+    }
+
+        .sitemap > ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+            .sitemap > ul > li {
+                text-decoration: none;
+                font-size: 150%;
+                font-weight: bold;
+                list-style-type: none;
+                line-height: 1.5;
+                margin: 10px;
+            }
+
+            .sitemap > ul > li {
+                font-weight: lighter;
+            }
+
+    #sitemapHeader {
+        text-align: center;
+    }
+}
+
+/*Responsive 510px - @media Styling to make views responsive at 510px*/
+@media only screen and (max-width: 510px) {
+    /*Responsive 510px - Shared View Styling*/
+    body {
+        width: 100%;
+        text-align: center;
+        overflow: no-display;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 1em;
+        font-style: normal;
+        font-weight: bold;
+        font-variant: normal;
+        line-height: normal;
+        margin-left: 1%;
+    }
+
+    h2, h3 {
+        font-size: 0.9em;
+        font-style: normal;
+        font-weight: bold;
+        font-variant: normal;
+        margin-left: 1%;
+    }
+
+    p {
+        font-size: 0.8em;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+    }
+
+    li {
+        font-size: 70%;
+        font-style: normal;
+        font-variant: normal;
+    }
+
+    /*header details*/
+    #small_mulderbert {
+        display: inline-block;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #wrapper, #header {
+        clear: both;
+        overflow: no-display;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+        #header h2 img {
+            display: none;
+        }
+
+        #header h2 {
+            font-size: 100%;
+        }
+
+        #header fieldset {
+            clear: both;
+            margin: 1% auto;
+            padding: 0;
+            align-content: center;
+            box-sizing: border-box;
+        }
+
+    #loginbox {
+        width: 40%;
+        margin: 1% auto;
+        display: inline;
+        font-size: 100%;
+    }
+
+    /*Responsive 510px - Vertical Navigation Bar Styling*/
+    #nav_bar {
+        display: none;
+    }
+
+    #btnOpen {
+        display: inline;
+        float: left;
+        margin-left: 0.5%;
+    }
+
+        #btnOpen img {
+            display: inline;
+            width: 25%;
+            float: left;
+            border-radius: 4%;
+        }
+
+    #responsive_nav_wrapper {
+        margin-top: -15%;
+        display: block;
+        width: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: rgba(225, 233, 237, 0.1);
+        background-color: rgb(225, 233, 237); /*RGB version of #CEE5ED*/
+        overflow-x: hidden;
+        transition: 0.5s;
+        position: relative;
+        border-top-right-radius: 7%;
+        border-bottom-right-radius: 7%;
+        -webkit-border-top-right-radius: 7%; /*IE Edge+*/
+        -webkit-border-bottom-right-radius: 7%; /*IE Edge+*/
+    }
+
+    #responsive_nav {
+        top: 1%;
+        margin-top: 4%;
+    }
+
+        #responsive_nav ul {
+            list-style-type: none;
+            width: 100%;
+            color: #131b59;
+            transition: 0.3s;
+        }
+
+            #responsive_nav ul li {
+                display: block;
+                padding-bottom: 3%;
+                text-align: center;
+                text-decoration: none;
+                padding: 1%;
+                font-stretch: expanded;
+            }
+
+                #responsive_nav ul li a {
+                    text-decoration: none;
+                    position: relative;
+                    padding-bottom: 1%;
+                    font-weight: normal;
+                    font-size: 1em;
+                    display: inline-block;
+                }
+
+                    #responsive_nav ul li a:hover {
+                        font-size: 0.9em;
+                        font-weight: bold;
+                        color: cadetblue;
+                    }
+
+                    #responsive_nav ul li a:visited {
+                        color: dodgerblue;
+                    }
+    /*Responsive 510px - Slider and Position the close button (top right corner) */
+    .overlay {
+        position: fixed;
+        top: 10%;
+        right: 23%;
+        font-size: 2em;
+    }
+
+    #btnClose {
+        display: inline;
+        margin-top: 0.5%;
+        margin-right: 1%;
+    }
+
+        #btnClose img {
+            display: inline;
+            margin-right: 7%;
+            width: 10%;
+            float: right;
+            border-radius: 4%;
+        }
+
+    /*Responsive 510px - About us design*/
+    #about_us {
+        clear: both;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    /* 510px - Styling of multiple view divs/components */
+    #about_left, #about_middle, #about_right, #contact_form, #faq,
+    #offline_contact, .service_products, #service_description,
+    #product_range, .product_display, #order_acceptance, #contact_response,
+    #register_form, #registration_success, .register_details, #terms_conditions,
+    #footer_address, #footer_social_media, #footer_links {
+        clear: both;
+        width: 98%;
+        margin: 1% auto;
+        padding: 0.5%;
+        align-content: center;
+        text-align: center;
+        list-style-type: none;
+    }
+
+        .register_details p {
+            text-align: left;
+        }
+
+        #tech_support img, #fridge_services img,
+        .service_description_images img, #service_description img {
+            align-content: center;
+            width: 100%;
+            height: auto;
+            border-radius: 5%;
+            margin-bottom: 4%;
+        }
+    /*Responsive 510px - Home View Styling*/
+    #home_introduction {
+        display: inline-block;
+    }
+
+    #home_gallery {
+        margin: 0 auto;
+        position: relative;
+        width: 15em;
+        height: 15em;
+        padding: 0.5%;
+        box-sizing: content-box;
+    }
+        #home_gallery img {
+            width: 90%;
+            height: auto;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+            box-sizing: content-box;
+        }
+    
+    /*Responsive 510px - Footer Styling*/
+    #footer_address, #footer_links, #footer_social_media {
+        clear: both;
+        resize: both;
+        width: 100%;
+        display: block;
+    }
+}

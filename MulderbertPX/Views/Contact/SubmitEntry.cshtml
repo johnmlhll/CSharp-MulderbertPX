@@ -1,0 +1,14 @@
+﻿@model MulderbertPX.Models.ContactModel
+@{
+    ViewBag.Title = "SubmitEntry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="contact_response">
+    <h2>Success!</h2>
+    <div id="successful_contact">
+        <h3><strong>Thank you!</strong> Your details have been submitted successfully.</h3>
+        <h4>@Html.ActionLink("Back to Shopping for Products","Index","ProductRange")</h4>
+        <h4>@Html.ActionLink("Back to Shopping for Services", "Index","ProductService")</h4>
+        <h4>@Html.ActionLink("Back to Home Page", "Index", "Home")</h4>
+    </div>
+</div>

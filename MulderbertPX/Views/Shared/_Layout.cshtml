@@ -1,0 +1,102 @@
+﻿@{ 
+    ViewBag.CustomerID = MulderbertPX.Models.DataModel.CustomerID;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mulbert & Co. supplies a wide range of refrigeration products and services from Dublin, Ireland">
+    <title>@ViewBag.Title - Mulderbert &amp; Co.</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="~/Scripts/JavaScript.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2>
+                <span id="small_mulderbert">Mulderbert & Co</span>
+                <img src="~/Images/BlackGothic1med_no-full-stop.jpg" alt="Mulderbert Logo" />   <sup>The</sup>PX
+            </h2>
+            <div id="loginbox_bar">
+                <div id="loginbox">
+                    @if (Request.IsAuthenticated)
+                    {
+                        <fieldset>
+                            <legend>Account Logout</legend>
+                            <h4>Welcome @ViewBag.ScreenName</h4>
+                            <h4>Your Customer ID is @ViewBag.CustomerID</h4>
+                            <p>@Html.ActionLink("Customer Logout", "Logout", "Login")</p>
+                            <p>@Html.ActionLink("New Customer Registration", "Index", "Registration")</p>
+                        </fieldset>
+                    }
+                    else
+                    {
+                        <fieldset>
+                            <legend>Account Login</legend>
+                            <p>@Html.ActionLink("Customer Login", "Index", "Login")</p>
+                            <p>@Html.ActionLink("New Customer Registration", "Index", "Registration")</p>
+                        </fieldset>
+                    }
+                </div>
+            </div>
+        </div>
+        <div id="btnOpen" onclick="openNav()"><img src="~/Images/menu_icon.png" alt="Image Icon to Open Menu"></div>
+        <div id="responsive_nav_wrapper"`class="overlay">
+            <nav id="responsive_nav">
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About Us", "Index", "AboutUs")</li>
+                    <li>@Html.ActionLink("Product Range", "Index", "ProductRange")</li>
+                    <li>@Html.ActionLink("Product Services", "Index", "ProductService")</li>
+                    <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                    <li>@Html.ActionLink("Register", "Index", "Registration")</li>
+                </ul> 
+                <a href="javascript:void(0)" id="btnClose" onclick="closeNav()"><img src="~/Images/menu_icon.png" alt="Image Icon to Close Menu"></a>
+            </nav>
+        </div>
+        <nav id="nav_bar">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About Us", "Index", "AboutUs")</li>
+                <li>@Html.ActionLink("Product Range", "Index", "ProductRange")</li>
+                <li>@Html.ActionLink("Product Services", "Index", "ProductService")</li>
+                <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                <li>@Html.ActionLink("Register", "Index", "Registration")</li>
+            </ul>
+        </nav>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            <div id="foot">
+                <hr>
+                <div id="footer_links">
+                    <a><img alt="fridge" src="~/Images/BlackGothicIconSmall.jpg" /></a>
+                    <div class="order_links">
+                        <h5>@Html.ActionLink("Site Map", "Index", "SiteMap")</h5>
+                        <h5>@Html.ActionLink("Home", "Index", "Home")</h5>
+                    </div>
+                </div>
+                <div id="footer_address">
+                    <p>Mulderbert &amp; Co.</p>
+                    <p>George's Street, Dublin City</p>
+                    <p>0871234567</p>
+                    <p>mulderbertco@gmail.com</p>
+                    <p>&copy; Mulderbert Ltd 2017</p>
+                </div>
+                <div id="footer_social_media">
+                    <!--In case I forget, when WebSite gets deployed, the deployment URL needs to be inserted where the # is in the href/link string query, cheers ladz, John M.-->
+                    <a href="http://www.Facebook.com/sharer.php?u=#/" target="_blank"><img src="~/Images/Facebook.jpg" alt="Facebook Share Icon" /></a>
+                    <a href="http://www.Twitter.com/share" data-count="vertical" target="_blank"><img src="~/Images/Twitter.jpg" alt="Twitter Share Icon" /></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

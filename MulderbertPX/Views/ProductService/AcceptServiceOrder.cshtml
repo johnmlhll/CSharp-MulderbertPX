@@ -1,0 +1,28 @@
+﻿@model MulderbertPX.Models.ProductModel
+
+@{
+    ViewBag.Title = "AcceptServiceOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="order_acceptance">
+    <h2>Order Acceptance</h2>
+    <p>
+        Thank you for your order, we shall be in touch regarding your order's delivery (including any shipping charges) and payment details within 48 hours.
+        Please use the @Html.ActionLink("Contact Us", "Index", "Contact") page to contact us in the interim period.
+    </p>
+    <h4>We confirm your order details are as follows:</h4>
+    <p>Order Type: <strong>@Model.OrderType</strong></p>
+    <p>Product Name: <strong>@Model.ServiceName</strong></p>
+    <p>Product Description: <strong>@Model.ProductDescription</strong> </p>
+    <p>Product Price Per Unit: <strong>€@Model.UnitPrice</strong></p>
+    <p>Order Quanity: <strong>@Model.UnitQuanity</strong></p>
+    <p>Net Price: <strong>€@Model.NetTotal</strong></p>
+    <p>Sales Tax (VAT) at 23%: <strong><u>€@Model.TaxTotal</u></strong></p>
+    <p><strong>Order Total: €@Model.OrderTotal</strong></p>
+    <p>______________________________________</p>
+</div>
+<div class="order_links">
+    <h4>@Html.ActionLink("Continue Shopping", "Index", "ProductService")</h4>
+    <h4>@Html.ActionLink("Back To Home Page", "Index", "Home")</h4>
+</div>
+

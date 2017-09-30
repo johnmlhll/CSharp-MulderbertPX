@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Site Map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h1>Site Map</h1>
+    <nav class="sitemap">
+        <ul>
+            <li>@Html.ActionLink("Home Page", "Index", "Home")</li>
+            <li>@Html.ActionLink("About Us", "Index", "AboutUs")</li>
+            <li>@Html.ActionLink("Product Range", "Index", "ProductRange")</li>
+            <li>@Html.ActionLink("Product Services", "Index", "ProductService")</li>
+            <li>@Html.ActionLink("Contact Us", "Index", "Contact")</li>
+            <li>@Html.ActionLink("Login - Access Your Account", "Index", "Login")</li>
+            <li>@Html.ActionLink("Register New Account", "Index", "Registration")</li>
+         </ul>
+    </nav>
+</div>

@@ -1,0 +1,37 @@
+﻿@model MulderbertPX.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="login">
+    <h1>Login</h1>
+
+    <div>
+        <!--Error message from Login attempt-->
+        <h3>@ViewData["message"]</h3>
+        <h3 class="validation">@Html.ValidationSummary()</h3>
+    </div>
+    <!--Login View-->
+    <img src="~/Images/BlackGothicIconMed.jpg" alt="Mulderbert Co. Logo" />
+    @using (Html.BeginForm("LoginSuccess", "Login", FormMethod.Post))
+    {
+        <h3>
+            @Html.LabelFor(a => a.Username)
+            @Html.TextBoxFor(a => a.Username, new { @placeholder = "Username" })
+        </h3>
+
+        <h3>
+            @Html.LabelFor(a => a.Password)
+            @Html.PasswordFor(a => a.Password, new { @placeholder = "Password" })
+        </h3>
+        <br>
+        <input id="Submit1" type="submit" value="Submit"/>
+    }
+    <p>First time here?</p>
+    <p>@Html.ActionLink("Register Here", "Index", "Registration")</p>
+</div>
+
+
+

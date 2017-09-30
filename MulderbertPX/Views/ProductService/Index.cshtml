@@ -1,0 +1,74 @@
+﻿@model MulderbertPX.Models.ProductModel
+@{
+    ViewBag.Title = "ServiceRange";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div id="service_description">
+        <h2>Product Services</h2>
+        <p> Mulderbert &amp; Co. offers a wide range of services to keep your units functioning like new for years to come.</p>
+        <p> We put customer satisfaction at a premium in all our dealings; you want the best and we want the best for you.</p>
+        <a class="service_description_images"><img src="~/Images/shop-fridges_400px.jpg" alt="Shop Fridges Image"/></a>
+        <p>
+            Be assured that you will be choosing from the best refrigerators, coolers and freezers available when you shop with Mulderbert &amp; Co.,
+            with extended warrenties included on all of our products.
+        </p>
+        <p> Furthermore we offer a range of services to ensure your purchase will continue to meet all EU health and safety standards.</p>
+        <a class="service_description_images"><img src="~/Images/walkInCooler.jpg" alt="Industrial Fridge Image" /></a>
+        <p> Your refrigeration needs are safe in the hands of a company with 40 years experience in the industry, innumerable satisfied customers can testify to that.</p>
+        <p> Enquiries and comments can be addressed to us directly through our @Html.ActionLink("Contacts Page", "Index", "Contact")</p>
+        <img src="~/Images/SafetyStandard.jpg" alt="Safety Standards Logo" />
+    </div>
+    <div class="service_products">
+        <div id="fridge_services">
+            <img src="~/Images/fridgeServicesSmall.jpg" />
+            <ul>
+                <li>Full Service</li>
+                <li>Full Installation</li>
+                <li>Telephone Tech Support</li>
+                <li>Maintenance and repair callout</li>
+                <li>€4,000 Annual Subscription</li>
+                <li>
+                    <p>Buy Product and Add to List<p>
+                    @using (Html.BeginForm("AcceptServiceOrder", "ProductService", FormMethod.Post))
+                    {
+                        <p>
+                             @Html.LabelFor(c => c.ServiceName)
+                             @Html.EnumDropDownListFor(c => c.ServiceName, "Choose Your Service", new { @class = "form-control" })
+                        </p>
+                        <p>
+                            @Html.LabelFor(c => c.UnitQuanity)
+                            @Html.EnumDropDownListFor(c => c.UnitQuanity, "Service Cover in Years", new { @class = "form-control" })
+                        </p>
+                        <input type="submit" value="Complete Your Order" />
+                     }
+                </li>
+            </ul>
+        </div>
+        <div id="tech_support">
+            <img src="~/Images/callCentre.jpg" />
+            <ul>
+                <li>Telephone Tech Support</li>
+                <li>Online access to Mechanical Support</li>
+                <li>Video Guides on Fridge Maintenence</li>
+                <li>€1000 Annual Charge</li>
+                <li>
+                    <p>Buy Product and Add to List<p>
+                        @using (Html.BeginForm("AcceptServiceOrder", "ProductService", FormMethod.Post))
+                        {
+                            <p>
+                                @Html.LabelFor(c => c.ServiceName)
+                                @Html.EnumDropDownListFor(c => c.ServiceName, "Choose Your Service", new { @class = "form-control" })
+                            </p>
+                            <p>
+                                @Html.LabelFor(c => c.UnitQuanity)
+                                @Html.EnumDropDownListFor(c => c.UnitQuanity, "Service Cover in Years", new { @class = "form-control" })
+                            </p>
+                            <input type="submit" value="Complete Your Order" />
+                        }
+                    </li>
+                </ul>
+         </div>
+    </div>
+</div>

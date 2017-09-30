@@ -1,0 +1,86 @@
+﻿@model MulderbertPX.Models.ContactModel
+@{
+    ViewBag.Title = "Contact";
+    ViewBag.Message = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <section id="contact_form">
+        <h1>Contact Us</h1>
+        @using (Html.BeginForm("SubmitEntry", "Contact", FormMethod.Post))
+        {
+            <div class="validation"> @Html.ValidationSummary()</div>
+            <div class="validation"> @ViewBag.Message</div>
+
+            @Html.LabelFor(c => c.FirstName)
+            <div class="inputbox">
+                @Html.TextBoxFor(c => c.FirstName)
+            </div>
+
+            @Html.LabelFor(c => c.LastName)
+            <div class="inputbox">
+                @Html.TextBoxFor(c => c.LastName)
+            </div>
+            @Html.LabelFor(c => c.Phone)
+            <div class="inputbox">
+                @Html.TextBoxFor(c => c.Phone)
+            </div>
+            @Html.LabelFor(c => c.Email)
+            <div class="inputbox">
+                @Html.TextBoxFor(c => c.Email)
+            </div>
+            @Html.LabelFor(c => c.ContactClass)
+            <div class="inputbox">
+                @Html.EnumDropDownListFor(c => c.ContactClass, "Select Closest Reason for Contact", new { @class="form-control"})
+            </div>
+            @Html.LabelFor(c => c.AccountNumber)
+            <div class="inputbox">
+               @Html.TextBoxFor(c => c.AccountNumber)
+            </div>
+            @Html.LabelFor(c => c.Request)
+            <div class="textbox">
+                @Html.TextAreaFor(c => c.Request, new { @class = "required", @cols = 40, @rows = 10 })
+            </div>
+            <input class="submit_button" type="submit" value="Submit" />
+        }
+    </section>
+    <div id="contact_details_faq">
+        <aside id="faq">
+            <h2>FAQ (click on question)</h2>
+            <section>
+                <h2 class="question">What kind of products do you stock?</h2>
+                <p class="answer">We specailise in refrigeration solutions, from walk-in coolers to mini-fridges, for domestic or industrial use. </p>
+            </section>
+            <section>
+                <h2 class="question">How long does delivery take?</h2>
+                <p class="answer">Delivery time is dependent on your location and the size of your order. Orders are usually despatched within 10 working days</p>
+            </section>
+            <section>
+                <h2 class="question">Where do you ship to?</h2>
+                <p class="answer">We ship our products throughout Europe.</p>
+            </section>
+            <section>
+                <h2 class="question">Can my purchase be maintained by your company?</h2>
+                <p class="answer">Absolutely! We offer a variety of service packages to maintain and care for for your purchase. Take a look at our offers on our @Html.ActionLink("Product Services", "Index", "ProductService") page.</p>
+            </section>
+            <section>
+                <h2 class="question">How do I place an order</h2>
+                <p class="answer">Register your details with us, then login, select your products and service pacakge, add them to your cart and submit your order!</p>
+            </section>
+        </aside>
+        <aside id="offline_contact">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Irish Headquarters - 012345788</li>
+                <li>European Headquarters - 0778945675</li>
+                <li>Sales Inquiries - Donna Hurley - 0871234567</li>
+                <li>Technical Queries - Dan Mould - 08798745154</li>
+                <li>Human Resources Office - Dave Coffey - 0876497482</li>
+                <li>Logistics and Operations - John Reynolds - 0873455411</li>
+                <li>Finance and Accounting - Dermot McFarlane - 0879866552</li>
+                <li>Shipping and Ordering - Niall Connolly - 0872245786</li>
+            </ul>
+        </aside>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿@model MulderbertPX.Models.LoginModel
+@{
+    ViewBag.Title = "LoginSuccess";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="login_success">
+
+    <h2>Welcome Back! <strong>Your Username is: @Model.Username</strong></h2>
+
+    <h3>@Html.ActionLink("Shop For Products", "Index", "ProductRange")</h3>
+
+    <h3>@Html.ActionLink("Shop For Services", "Index", "ProductService")</h3>
+
+    <h3>@Html.ActionLink("Get in Touch with Us", "Index", "Contact")</h3>
+
+    <h3>@Html.ActionLink("Back to Home Page", "Index", "Home")</h3>
+</div>
+

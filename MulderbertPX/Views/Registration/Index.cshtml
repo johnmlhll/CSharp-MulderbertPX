@@ -1,0 +1,110 @@
+﻿
+
+@model MulderbertPX.Models.CustomerModel
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h1>Register Your Details</h1>
+    <div id="register_form">
+        @using (Html.BeginForm("RegSuccess", "Registration", FormMethod.Post))
+        {
+            <div class="register_details">
+                <!--Personal Details-->
+                <h2>Personal Details</h2>
+                <h2 class="validation">@Html.ValidationSummary()</h2>
+                <p>
+                    @Html.LabelFor(m => m.ContactFirstName)
+                    <span> @Html.TextBoxFor(m => m.ContactFirstName, new { @placeholder = "Enter First Name" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.ContactLastName)
+                    <span>@Html.TextBoxFor(m => m.ContactLastName, new { @placeholder = "Enter Last Name"})</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.Username)
+                    <span>@Html.TextBoxFor(m => m.Username, new { @placeholder = "Enter Username" })</span>
+                </p>
+
+                <p>
+                    @Html.LabelFor(m => m.Password)
+                    <span>@Html.TextBoxFor(m => m.Password, new { @placeholder = "Enter Password" })</span>
+                </p>
+                <!--Contact Information-->
+                <h2>Contact Information</h2>
+                  <p>
+                      @Html.LabelFor(m => m.Email)
+                      <span>@Html.TextBoxFor(m => m.Email, new { @placeholder = "e.g. bloggs@email.com" })</span>
+                  </p>
+                  <p>
+                      @Html.LabelFor(m => m.ContactNumber, "Phone Number")
+                      <span> @Html.TextBoxFor(m => m.ContactNumber, new { @placeholder = "e.g. 0871234567" })</span>
+                    </p>
+            </div>
+            <div class="register_details">
+                <!--Company Details for entry-->
+                <h2>Company Details</h2>
+                <p>
+                    @Html.LabelFor(m => m.CompanyName)
+                    <span>@Html.TextBoxFor(m => m.CompanyName, new { @placeholder = "Registered Co. Name" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.CompanyNumber)
+                    <span>@Html.TextBoxFor(m => m.CompanyNumber, new { @placeholder = "Enter Company Number" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.TaxVatNumber)
+                    <span>@Html.TextBoxFor(m => m.TaxVatNumber, new { @placeholder = "e.g. IE234563D" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(c => c.CustomerType)
+                   <span> @Html.EnumDropDownListFor(c => c.CustomerType, "Select Customer Type", new { @class="form-control" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.PaymentTerms)
+                    <span>@Html.EnumDropDownListFor(c => c.PaymentTerms, "Select Desired Payment Terms", new { @class="form-control" })</span>
+                </p>
+                <!--Shipping Details for entry-->
+                <h2>Shipping Details</h2>
+                <p>
+                    @Html.LabelFor(m => m.AddressLine1, "Address Line 1")
+                    <span>@Html.TextBoxFor(m => m.AddressLine1, new { @placeholder = "Enter Street Address" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.AddressLine2, "Address Line 2")
+                    <span>@Html.TextBoxFor(m => m.AddressLine2, new { @placeholder = "Enter Local Area" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.PostCode)
+                    <span>@Html.TextBoxFor(m => m.PostCode, new { @placeholder = "Enter PostCode" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.City)
+                    <span>@Html.TextBoxFor(m => m.City, new { @placeholder = "Enter City" })</span>
+                </p>
+                <p>
+                    @Html.LabelFor(c => c.Country)
+                    <span>@Html.EnumDropDownListFor(c => c.Country, "Select Country", new { @class="form-control"})</span>
+                </p>
+            </div>
+        <div id="terms_conditions">
+            <h2>Terms &amp; Conditions</h2>
+            @Html.LabelFor(m => m.TermsAndConditionsOk)
+            <p>
+                Mulderbert &amp; Co. will use this information only to identify you and to allow access to our online store.
+                Your use of this site is governed by our Terms of Use and Privacy Policy which can be requested by contacting us directly.
+            </p>
+            <br />
+            <p>Under the Data Protection Act, your information will never be passed to third-party agents or vendors.</p>
+            <p>Mulderbert &amp; Co. will not be held responsible in the event of a security breach.</p>
+            <p>
+                I agree to the terms and conditions
+                @Html.CheckBoxFor(c => c.TermsAndConditionsOk)
+            </p>
+            <input id="Submit1" type="submit" value="Submit" />
+        </div>
+        }
+    </div>
+</div>

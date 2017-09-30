@@ -1,0 +1,105 @@
+﻿@model MulderbertPX.Models.ProductModel
+
+@{
+    ViewBag.Title = "ProductRange";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="product_range">
+    <h2>Product Range</h2>
+   <!--V1.0 has no payment feature, so these "completed orders" will be called back by a real person to manually process payment and arrange delivery-->
+    <div class="product_display">
+        <ul>
+            <li><img src="~/Images/chestFreezer2.jpg" alt="Freezer Chest Product"/></li>
+            <li class="product_name"><strong> Rx7 Fridge</strong></li>
+            <li>
+                The Beko tall larder fridge offers a space saving design with all the top quality features of an
+                A+ energy efficient appliance. It includes fully adjustable glass shelves, a chrome wire wine rack and antibacterial door seal.
+            </li>
+            <li>Energy efficiency rating: A+.<br />Energy consumption: 132kWh per year <br /> Net fresh food storage volume 252 litres.</li>
+            <li>€<strong class="product_price">1099</strong></li>
+            <li>
+                Buy Product and Add to List 
+                @using (Html.BeginForm("AcceptOrder", "ProductRange", FormMethod.Post))
+                {
+                    <p>@Html.LabelFor(c => c.ProductName)
+                    @Html.EnumDropDownListFor(c => c.ProductName, "Choose Your Product", new { @class = "form-control" })</p>
+                    <p>@Html.LabelFor(c => c.UnitQuanity)
+                    @Html.EnumDropDownListFor(c => c.UnitQuanity, "Select Quanity for this Order", new { @class = "form-control" })</p>
+                    <input type="submit" value="Complete Product Order" />
+                }
+            </li>
+        </ul>
+    </div>
+
+    <div class="product_display">
+        <ul>
+            <li><img src="~/Images/chestFreezer1.gif" alt="Industrial Yr9 Freezer image" /></li>
+            <li class="product_name"><strong>Industrial Yr9 Fridge</strong></li>
+            <li>
+                The two stainless steel drawers are large enough to accept full sized150mm deep gastronorm pans, allowing for large
+                volumes food  to be chilled. The electronic display is precise, ensuring items are kept at the perfect temperature.
+            </li>
+            <li>Energy efficiency rating: A+. <br />Energy consumption: 350W. 1.95A. per year <br />Net fresh food storage volume 252 litres.</li>
+            <li>€<strong class="product_price">1499</strong></li>
+            <li>
+                Buy Product and Add to List 
+                @using (Html.BeginForm("AcceptOrder", "ProductRange", FormMethod.Post))
+                {
+                    <p>@Html.LabelFor(c => c.ProductName)
+                    @Html.EnumDropDownListFor(c => c.ProductName, "Choose Your Product", new { @class = "form-control" })</p>
+                    <p>@Html.LabelFor(c => c.UnitQuanity)
+                    @Html.EnumDropDownListFor(c => c.UnitQuanity, "Select Quanity for this Order", new { @class = "form-control" })</p>
+                    <input type="submit" value="Complete Product Order" />
+                }
+            </li>
+        </ul>
+    </div>
+
+    <div class="product_display">
+        <ul>
+            <li><img src="~/Images/shopFridges.jpg" alt="Store Cooler Dr9 Image"/></li>
+            <li class="product_name"><strong>Store Dr9 Cooler</strong></li>
+            <li>
+                This range has been designed to maximise space as well as access. Concealed hinges create a seamless finish, while flat,
+                vertically brushed EZKleen stainless steel doors will add sophistication and complement any store front
+            </li>
+            <li>Energy efficiency rating: A. <br />Energy consumption: 400W. 2.15A. per year <br />Intelligently adapt to daily use to save energy</li>
+            <li>€<strong class="product_price">4799</strong></li>
+            <li>
+                Buy Product and Add to List 
+                @using (Html.BeginForm("AcceptOrder", "ProductRange", FormMethod.Post))
+                {
+                    <p>@Html.LabelFor(c => c.ProductName)
+                    @Html.EnumDropDownListFor(c => c.ProductName, "Choose Your Product", new { @class = "form-control" })</p>
+                    <p>@Html.LabelFor(c => c.UnitQuanity)
+                    @Html.EnumDropDownListFor(c => c.UnitQuanity, "Select Quanity for this Order", new { @class = "form-control" })</p>
+                    <input type="submit" value="Complete Product Order" />
+                }
+            </li>
+        </ul>
+    </div>
+
+    <div class="product_display">
+        <ul>
+            <li><img src="~/Images/walkInCooler.jpg" alt="Walk in Cooler Image" /></li>
+            <li class="product_name"><strong>Walk-in Cooler</strong></li>
+            <li>
+                Designed with kitchen services in mind. One piece system with no coil to hang or drain line to run. Condensate evaporator
+                Refrigeration system is flush to the ceiling for 100% use of interior space.
+            </li>
+            <li>Energy efficiency rating: A++. <br />Holds Temperatures Even With Frequent Door Openings to Reduce Your Energy Costs</li>
+            <li>€<strong class="product_price">13499</strong></li>
+            <li>
+                Buy Product and Add to List 
+                @using (Html.BeginForm("AcceptOrder", "ProductRange", FormMethod.Post))
+                {
+                    <p>@Html.LabelFor(c => c.ProductName)
+                    @Html.EnumDropDownListFor(c => c.ProductName, "Choose Your Product", new { @class = "form-control" })</p>
+                    <p>@Html.LabelFor(c => c.UnitQuanity)
+                    @Html.EnumDropDownListFor(c => c.UnitQuanity, "Select Quanity for this Order", new { @class = "form-control" })</p>
+                    <input type="submit", value="Complete Product Order"/>
+                }
+            </li>
+        </ul>
+    </div>
+</div>

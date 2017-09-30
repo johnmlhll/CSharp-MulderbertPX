@@ -1,0 +1,38 @@
+﻿@model MulderbertPX.Models.CustomerModel
+@{
+    ViewBag.Title = "RegSuccess";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="registration_success">
+    <h2>Registration Success!</h2>
+    <h2>Thank you! Your details have been submitted successfully.</h2>
+    <div id="registration_summary">
+        <h4><strong>New Customer Summary</strong></h4>
+        <p><u>Contact Details:</u></p>
+        <p>Company Number: <span>@Model.CompanyNumber</span></p>
+        <p>Company Tax Number: <span>@Model.TaxVatNumber</span></p>
+        <p>Company Name: <span>@Model.CompanyName</span></p>
+        <p>Contact Name: <span>@Model.ContactFirstName &nbsp; @Model.ContactLastName</span></p>
+        <p>Phone Number: <span>@Model.ContactNumber</span></p>
+        <p>Email: <span>@Model.Email</span></p>
+        <p><u>Customer Address:</u></p>
+        <p>Street Address: <span>@Model.AddressLine1</span></p>
+        <p>Area: <span>@Model.AddressLine2</span><p>
+        <p>City: <span>@Model.City</span></p>
+        <p>Country: <span>@Model.Country</span></p>
+        <p>PostCode: <span>@Model.PostCode</span></p>
+        <p><u>Account Details:</u></p>
+        <p>Customer Type: <span>@Model.CustomerType</span></p>
+        <p>Customer Payment Terms: <span>@Model.PaymentTerms</span></p>
+        <p>Customer Username: <span>@Model.Username</span></p>
+        <p>Customer Password: <span>***********</span></p>
+        <p>Customer Accepted Terms and Conditions: <span>@Model.TermsAndConditionsOk</span></p>
+        <h4><strong>Welcome! A member of our customer service team will contact you over the coming days</strong></h4>
+    </div>
+    <div class="order_links">
+        <h4>@Html.ActionLink("Back to Shopping for Products", "Index", "ProductRange")</h4>
+        <h4>@Html.ActionLink("Back to Shopping for Services", "Index", "ProductService")</h4>
+        <h4>@Html.ActionLink("Back to Home Page", "Index", "Home")</h4>
+    </div>
+</div>
