@@ -11,10 +11,12 @@ namespace MulderbertPX.Models
     /// </summary>
     public class ContactModel
     {
+        [Display(Name="First Name")]
         [Required(ErrorMessage = "First Name Required")]
         [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "First Name must contain alphabets")]
         public string FirstName { get; set; }
 
+        [Display(Name="Last Name")]
         [Required(ErrorMessage = "Last Name Required")]
         [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "Last Name must contain alphabets")]
         public string LastName { get; set; }

@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{2F04297B-3E3C-4DCE-920A-A826D5DF9D13}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MulderbertPX/Models/ContactModel.cs">
+    <Files>
+      <File FileName="MulderbertPX/Models/ContactModel.cs" Line="14" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MulderbertPX PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

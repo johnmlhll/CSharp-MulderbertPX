@@ -50,4 +50,14 @@
     <AccountReference />
     <Request>great Job you do!</Request>
   </ContactEntry>
+  <ContactEntry>
+    <ContactDate>2017-10-04T14:43:33.721215+01:00</ContactDate>
+    <FirstName>Steven</FirstName>
+    <LastName>McCaffrey</LastName>
+    <Phone>08234324</Phone>
+    <Email>stephen@gmail.com</Email>
+    <ContactType>CustomerService</ContactType>
+    <AccountReference />
+    <Request>Can someone explain how Visual Studios for Mac now fully Supports ASP.NET? Don't get me wrong, Im not complaining.. just suprising... thats all! No wait. you guys sell fridges so who Im talking to the wrong guys!!.. Dooh!</Request>
+  </ContactEntry>
 </Contactus>
