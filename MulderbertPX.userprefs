@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{2F04297B-3E3C-4DCE-920A-A826D5DF9D13}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MulderbertPX/Models/ContactModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MulderbertPX/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="MulderbertPX/Models/ContactModel.cs" Line="14" Column="23" />
+      <File FileName="MulderbertPX/Models/ContactModel.cs" Line="20" Column="1" />
+      <File FileName="MulderbertPX/Views/Shared/_Layout.cshtml" Line="14" Column="93" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
