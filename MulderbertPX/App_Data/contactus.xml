@@ -70,4 +70,14 @@
     <AccountReference>54</AccountReference>
     <Request>Hey guys, is Chewy sleeping in your fridges again? He has gone missing.. not even Hans can find him!</Request>
   </ContactEntry>
+  <ContactEntry>
+    <ContactDate>2017-10-06T18:29:03.924241+01:00</ContactDate>
+    <FirstName>Hans</FirstName>
+    <LastName>Solo</LastName>
+    <Phone>08234324</Phone>
+    <Email>hans@jedi.com</Email>
+    <ContactType>CombinedSalesEnquiry</ContactType>
+    <AccountReference />
+    <Request>Hey, you guys seen Chewey around? I think he is sleeping in one of your fridges!</Request>
+  </ContactEntry>
 </Contactus>
