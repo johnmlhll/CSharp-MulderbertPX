@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using MulderbertPX.Models;
-using System.Web.Security;
 
 
 namespace MulderbertPX.Controllers
@@ -45,6 +40,8 @@ namespace MulderbertPX.Controllers
                     return View("RegSuccess", newCustomer);
                 }
                 else {
+                    TempData["DbMessage"] = "<script>alert(Registration Save Failed - There is a Problem with the Database, " +
+                        "please contact Technical Support through ContactUs page);</script>";
                     return View("Index");
                 }
             }

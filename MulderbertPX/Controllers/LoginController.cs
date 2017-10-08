@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
+﻿using System.Web.Security;
 using System.Web.Mvc;
-using System.Web.Helpers;
 using MulderbertPX.Models;
 
 
@@ -46,7 +41,7 @@ namespace MulderbertPX.Controllers
                     ViewBag.ScreenName = login.Username;
                     DataModel.CustomerID = dataProcessing.GetCustomerID(login.Username.ToString());
                     goodCookie = authenticateLogin.CreateNewTicket(login.Username);
-                    if (goodCookie) { authenticateLogin.RenewAuthenticatedCookie();  }
+                    if (goodCookie) { authenticateLogin.RenewAuthenticatedCookie(); }
                     message = "Login Success";
                     ViewData["message"] = message;
                 }

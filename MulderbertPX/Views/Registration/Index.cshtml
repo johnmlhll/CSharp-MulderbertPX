@@ -12,6 +12,7 @@
         @using (Html.BeginForm("RegSuccess", "Registration", FormMethod.Post))
         {
             <div class="register_details">
+			    @Html.Raw(TempData["DbMessage"]) <!--Pop Up box placeholder-->
                 <!--Personal Details-->
                 <h2>Personal Details</h2>
                 <h2 class="validation">@Html.ValidationSummary()</h2>
@@ -27,7 +28,6 @@
                     @Html.LabelFor(m => m.Username)
                     <span>@Html.TextBoxFor(m => m.Username, new { @placeholder = "Enter Username" })</span>
                 </p>
-
                 <p>
                     @Html.LabelFor(m => m.Password)
                     <span>@Html.TextBoxFor(m => m.Password, new { @placeholder = "Enter Password" })</span>

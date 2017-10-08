@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MulderbertPX.Models
 {
@@ -18,6 +14,8 @@ namespace MulderbertPX.Models
         CombinedSalesEnquiry,
         [Display(Name ="Customer Service")]
         CustomerService,
+        [Display(Name = "Technical Support")]
+        TechnicalSupport,
         [Display(Name ="Company or ProductModel Feedback")]
         Feedback,
         General
