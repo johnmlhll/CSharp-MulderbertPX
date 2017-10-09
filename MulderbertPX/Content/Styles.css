@@ -542,7 +542,6 @@ li {
         text-align: center;
         overflow: no-display;
         margin: 0 auto;
-        position: relative;
     }
 
     h1 {
@@ -634,8 +633,7 @@ li {
         margin-top: -15%;
         display: block;
         width: 0;
-        height: 100%;
-        position: fixed;
+        height: 70%;
         z-index: 1;
         left: 0;
         top: 0;
@@ -652,19 +650,18 @@ li {
         -webkit-overflow-scrolling:auto
     }
     #responsive_nav {
-        top: 1%; 
-        margin-top: 4%; 
+        top: 1%;
+        margin-top: 2%;
     }
         #responsive_nav ul {
+            margin-bottom: -4%;
             list-style-type: none;
             width: 100%;
             color: #131b59;
-
             transition: 0.3s;
         }
             #responsive_nav ul li {
                 display: block;
-                padding-bottom: 3%;
                 text-align: center;
                 text-decoration: none;
                 padding: 1%;
@@ -679,7 +676,7 @@ li {
                     display: inline-block;
                 }
                     #responsive_nav ul li a:hover {
-                        font-size: 1em;
+                        font-size: 1.6em;
                         font-weight: bold;
                         color: cadetblue;
                     }
@@ -769,7 +766,7 @@ li {
             box-sizing: content-box;
         }
 
-    /*`Responsive 768px - SiteMap Styling*/
+    /*Responsive 768px - SiteMap Styling*/
     .sitemap {
         width: 90%;
     }
@@ -805,7 +802,6 @@ li {
         text-align: center;
         overflow: no-display;
         margin: 0 auto;
-        position: relative;
     }
 
     h1 {
@@ -895,11 +891,12 @@ li {
         }
 
     #responsive_nav_wrapper {
-        margin-top: -15%;
+        margin-top: -20%;
         display: block;
+        font-size:1.4em;
         width: 0;
-        height: 100%;
-        position: fixed;
+        height: 70%;
+        position: relative;
         z-index: 1;
         left: 0;
         top: 0;
@@ -907,7 +904,6 @@ li {
         background-color: rgb(225, 233, 237); /*RGB version of #CEE5ED*/
         overflow-x: hidden;
         transition: 0.5s;
-        position: relative;
         border-top-right-radius: 7%;
         border-bottom-right-radius: 7%;
         -webkit-border-top-right-radius: 7%; /*IE Edge+*/
@@ -916,10 +912,10 @@ li {
 
     #responsive_nav {
         top: 1%;
-        margin-top: 4%;
+        margin-top: 2%;
     }
-
         #responsive_nav ul {
+            margin-bottom: -6%;
             list-style-type: none;
             width: 100%;
             color: #131b59;
@@ -928,10 +924,8 @@ li {
 
             #responsive_nav ul li {
                 display: block;
-                padding-bottom: 3%;
                 text-align: center;
                 text-decoration: none;
-                padding: 1%;
                 font-stretch: expanded;
             }
 
@@ -940,12 +934,12 @@ li {
                     position: relative;
                     padding-bottom: 1%;
                     font-weight: normal;
-                    font-size: 1em;
+                    font-size: 1.2em;
                     display: inline-block;
                 }
 
                     #responsive_nav ul li a:hover {
-                        font-size: 0.9em;
+                        font-size: 1.6em;
                         font-weight: bold;
                         color: cadetblue;
                     }
