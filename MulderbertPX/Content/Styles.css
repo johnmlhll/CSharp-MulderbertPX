@@ -179,9 +179,11 @@ li {
 /*Login View Styling*/
 #login {
     width: 65%;
-    margin: auto;
+    margin: 1% auto;
     text-align: center;
     display: block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 #login form input{
@@ -544,8 +546,12 @@ li {
         margin: 0 auto;
     }
 
+    main {
+       margin-top: 10%;     
+    }
+
     h1 {
-        font-size: 1.3em;
+        font-size: 1.6em;
         font-style: normal;
         font-weight: bold;
         font-variant: normal;
@@ -630,7 +636,7 @@ li {
             border-radius: 4%;
         }
     #responsive_nav_wrapper {
-        margin-top: -15%;
+        margin-top: -25%;
         display: block;
         width: 0;
         height: 70%;
@@ -654,11 +660,11 @@ li {
         margin-top: 2%;
     }
         #responsive_nav ul {
-            margin-bottom: -4%;
             list-style-type: none;
             width: 100%;
             color: #131b59;
             transition: 0.3s;
+            margin-bottom: -4%;
         }
             #responsive_nav ul li {
                 display: block;
@@ -688,7 +694,6 @@ li {
         position: fixed;
         top: 10%;
         right: 23%;
-        font-size: 2em;
     }
 
     #btnClose {
@@ -703,6 +708,12 @@ li {
             float: right;
             border-radius: 4%;
         }
+
+    /* Responsive 768px - Login Styling*/
+    #login  {
+        margin-top: 5%; /*pushes container below loginbox in natural page flow*/
+    }
+
     /*Responsive 768px - About us design*/
     #about_us {
         clear: both;
@@ -794,9 +805,9 @@ li {
     }
 }
 
-/*Responsive 510px - @media Styling to make views responsive at 510px*/
-@media only screen and (max-width: 510px) {
-    /*Responsive 510px - Shared View Styling*/
+/*Responsive 500px - @media Styling to make views responsive at 500px*/
+@media only screen and (max-width: 500px) {
+    /*Responsive 500px - Shared View Styling*/
     body {
         width: 100%;
         text-align: center;
@@ -805,7 +816,7 @@ li {
     }
 
     h1 {
-        font-size: 1em;
+        font-size: 1.4em;
         font-style: normal;
         font-weight: bold;
         font-variant: normal;
@@ -872,7 +883,7 @@ li {
         font-size: 100%;
     }
 
-    /*Responsive 510px - Vertical Navigation Bar Styling*/
+    /*Responsive 500px - Vertical Navigation Bar Styling*/
     #nav_bar {
         display: none;
     }
@@ -891,9 +902,9 @@ li {
         }
 
     #responsive_nav_wrapper {
-        margin-top: -20%;
+        margin-top: -25%;
         display: block;
-        font-size:1.4em;
+        font-size: 1.2em;
         width: 0;
         height: 70%;
         position: relative;
@@ -915,11 +926,11 @@ li {
         margin-top: 2%;
     }
         #responsive_nav ul {
-            margin-bottom: -6%;
             list-style-type: none;
             width: 100%;
             color: #131b59;
             transition: 0.3s;
+            margin-bottom: -4%;
         }
 
             #responsive_nav ul li {
@@ -934,7 +945,6 @@ li {
                     position: relative;
                     padding-bottom: 1%;
                     font-weight: normal;
-                    font-size: 1.2em;
                     display: inline-block;
                 }
 
@@ -947,12 +957,11 @@ li {
                     #responsive_nav ul li a:visited {
                         color: dodgerblue;
                     }
-    /*Responsive 510px - Slider and Position the close button (top right corner) */
+    /*Responsive 500px - Slider and Position the close button (top right corner) */
     .overlay {
         position: fixed;
         top: 10%;
         right: 23%;
-        font-size: 2em;
     }
 
     #btnClose {
@@ -969,7 +978,7 @@ li {
             border-radius: 4%;
         }
 
-    /*Responsive 510px - About us design*/
+    /*Responsive 500px - About us design*/
     #about_us {
         clear: both;
         width: 90%;
@@ -981,7 +990,7 @@ li {
         -webkit-box-sizing: border-box;
     }
 
-    /* 510px - Styling of multiple view divs/components */
+    /* 500px - Styling of multiple view divs/components */
     #about_left, #about_middle, #about_right, #contact_form, #faq,
     #offline_contact, .service_products, #service_description,
     #product_range, .product_display, #order_acceptance, #contact_response,
@@ -1008,7 +1017,7 @@ li {
             border-radius: 5%;
             margin-bottom: 4%;
         }
-    /*Responsive 510px - Home View Styling*/
+    /*Responsive 500px - Home View Styling*/
     #home_introduction {
         display: inline-block;
     }
@@ -1032,7 +1041,7 @@ li {
             box-sizing: content-box;
         }
     
-    /*Responsive 510px - Footer Styling*/
+    /*Responsive 500px - Footer Styling*/
     #footer_address, #footer_links, #footer_social_media {
         clear: both;
         resize: both;
